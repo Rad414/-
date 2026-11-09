@@ -127,4 +127,80 @@
         </div>
 
         <div class="specs-grid">
-          <div
+          <div class="spec-row"><span class="spec-label">Материал:</span><span>Массив сосны</span></div>
+          <div class="spec-row"><span class="spec-label">Размер:</span><span>40 × 8 × 4 см</span></div>
+          <div class="spec-row"><span class="spec-label">Покрытие:</span><span>Масло + воск</span></div>
+          <div class="spec-row"><span class="spec-label">Крепление:</span><span>На 2 самореза</span></div>
+          <div class="spec-row"><span class="spec-label">Крючки:</span><span>4 шт., болты М8</span></div>
+          <div class="spec-row"><span class="spec-label">Вес:</span><span>0.8 кг</span></div>
+        </div>
+
+        <div class="features-list">
+          <div class="feature-tag">Ручная работа</div>
+          <div class="feature-tag">Лофт-стиль</div>
+          <div class="feature-tag">Экологичные материалы</div>
+          <div class="feature-tag">Быстрая установка</div>
+        </div>
+
+        <button class="buy-btn" onclick="alert('Товар добавлен в корзину!')">Добавить в корзину</button>
+      </div>
+    </div>
+
+    <!-- SEO Описание под требования Ozon -->
+    <div class="description-section">
+      <h2 class="section-title">Описание товара для Ozon</h2>
+      <p class="ozon-text">
+        <strong>Стильная ключница «Рейка» в стиле лофт — идеальное решение для вашей прихожей.</strong><br><br>
+        
+        Ищете способ организовать хранение ключей и мелких вещей, не жертвуя стилем? Наша ключница из массива сосны с индустриальными болтами станет ярким акцентом в интерьере в стиле лофт, сканди или минимализм. <br><br>
+
+        <strong>Почему стоит выбрать именно эту модель:</strong><br>
+        • <strong>Прочность и надежность:</strong> массив сосны выдерживает ежедневную нагрузку. Мы используем болты М8 вместо пластиковых крючков — они не сломаются и не выпадут со временем.<br>
+        • <strong>Экологичность:</strong> дерево покрыто натуральным маслом и воском. Это защищает древесину от влаги и подчеркивает природную текстуру.<br>
+        • <strong>Минималистичный дизайн:</strong> лаконичная форма и грубая фактура дерева вписываются в любой современный интерьер.<br>
+        • <strong>Простая установка:</strong> ключница крепится на два самореза. Вся фурнитура идет в комплекте.<br><br>
+
+        <strong>Характеристики:</strong><br>
+        Тип: Настенная ключница<br>
+        Материал корпуса: Сосна<br>
+        Покрытие: Масло-воск<br>
+        Количество крючков: 4<br>
+        Габариты (ДхШхВ): 400 × 80 × 40 мм<br>
+        Вес: 0.8 кг<br><br>
+
+        <strong>Комплектация:</strong><br>
+        1. Ключница из массива сосны — 1 шт.<br>
+        2. Крепежные саморезы — 2 шт.<br><br>
+
+        <strong>Рекомендации по уходу:</strong><br>
+        Для сохранения внешнего вида достаточно протирать изделие сухой или слегка влажной тканью. Избегайте длительного контакта с водой.
+      </p>
+    </div>
+
+    <footer>
+      &copy; 2024 ReiKa&Loft. Портфолио проекта. Не является публичной офертой.
+    </footer>
+  </div>
+
+  <script>
+    function setMain(thumb) {
+      document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+      document.getElementById('main-img').src = thumb.src;
+    }
+
+    function selectVariant(variant) {
+      document.querySelectorAll('.variant-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const priceDisplay = document.getElementById('price-display');
+      if (variant === 'loft') {
+        priceDisplay.innerText = '3 990 ₽';
+      } else if (variant === 'brass') {
+        priceDisplay.innerText = '4 490 ₽';
+      }
+    }
+  </script>
+</body>
+</html>
+
